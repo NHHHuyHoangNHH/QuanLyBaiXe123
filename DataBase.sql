@@ -94,7 +94,11 @@ begin
 end
 go
 
---	PD xoa XE 
+/*
+	PD xoa XE 
+	return 1 vao @out : thanh cong
+	return 0 vao @out : khong thanh cong
+*/
 create procedure PDDeleteXE
 	@BienSo		varchar(15),
 	@out		int = NULL output
@@ -120,6 +124,8 @@ go
 	PD sua XE 
 	@BienSoFind : Bien so can sua
 	@BienSoUpdate : Bien so sua
+	return 1 vao @out : thanh cong
+	return 0 vao @out : khong thanh cong
 */
 create procedure PDUpdateXE
 	@BienSoFind			varchar(15),
@@ -144,7 +150,11 @@ begin
 end
 go
 
--- PD them DOANHTHU cua thang
+/*
+	PD them DOANH THU	 
+	return 1 vao @out : thanh cong
+	return 0 vao @out : khong thanh cong
+*/
 create procedure PDInsertDOANHTHU
 	@out				int = NULL output
 as
@@ -168,6 +178,8 @@ go
 	PD them DOANHTHU
 	@Tien : So tien can them
 	Tu dong them doanh thu moi neu thang nay chua co
+	return 1 vao @out: thanh cong
+	return 0 voa @out: khong thanh cong
 */
 create procedure PDAddDOANHTHU
 	@Tien		int,
@@ -198,6 +210,8 @@ go
 
 /*
 	PD them VIP
+	return 1 vao @out: thanh cong
+	return 0 voa @out: khong thanh cong
 */
 create procedure PDInsertVIP
 	@BienSo		varchar(15)		,
@@ -224,6 +238,8 @@ go
 
 /*
 	PD sua VIP
+	return 1 vao @out: thanh cong
+	return 0 voa @out: khong thanh cong
 */
 create procedure PDUpdateVIP
 	@BienSoFind			varchar(15)		,
@@ -254,6 +270,8 @@ go
 
 /*
 	PD xoa VIP
+	return 1 vao @out: thanh cong
+	return 0 voa @out: khong thanh cong
 */
 create procedure PDDeleteVIP
 	@BienSo		varchar(15),
@@ -276,7 +294,9 @@ begin
 end
 go
 
---Them LOGG 
+/*
+	Them LOGG
+*/
 create procedure PDInsertLog
     @ThongTin	nvarchar(200)
 as
@@ -285,7 +305,12 @@ begin
 end
 go
 		--Trigger Log
---PD Them DONGTIEN
+
+/*
+	PD Them DONGTIEN
+		return 1 vao @out: thanh cong
+	return 0 voa @out: khong thanh cong
+*/
 create procedure PDInsertDONGTIEN
 	@BienSo		varchar(15)	,
 	@SoThang	int			,
@@ -307,7 +332,11 @@ begin
 end
 go
 
---PD Xoa DONGTIEN
+/*
+	PD xoa DONGTIEN
+	return 1 vao @out: thanh cong
+	return 0 voa @out: khong thanh cong
+*/
 create procedure PDDeleteDONGTIEN
 	@BienSo		varchar(15)	,
 	@output		int = NULL output
@@ -329,7 +358,11 @@ begin
 end
 go
 
---PD sua DONGTIEN
+/*
+	PD them DONGTIEN
+	return 1 vao @out: thanh cong
+	return 0 voa @out: khong thanh cong
+*/
 create procedure PDUpdateDONGTIEN
 	@BienSo		varchar(15)	,
 	@SoThang	int			,
@@ -353,7 +386,9 @@ begin
 end
 go
 
---CapNhat THAMSO
+/*
+CapNhat THAMSO
+*/
 create procedure PDUpdateTHAMSO
     @MocTien1		int    ,
     @MocTien2		int    ,
