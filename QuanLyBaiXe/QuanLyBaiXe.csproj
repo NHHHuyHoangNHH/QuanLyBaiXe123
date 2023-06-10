@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\VIPDAO.cs" />
+    <Compile Include="DAO\XeDAO.cs" />
+    <Compile Include="DTO\DoanhThu.cs" />
+    <Compile Include="DTO\DongTien.cs" />
+    <Compile Include="DTO\Logg.cs" />
+    <Compile Include="DTO\ThamSo.cs" />
+    <Compile Include="DTO\VIP.cs" />
+    <Compile Include="DTO\Xe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="vInOut.cs">
