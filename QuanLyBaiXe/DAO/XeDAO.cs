@@ -23,6 +23,11 @@ namespace QuanLyBaiXe.DAO
 
         private XeDAO() { }
 
+        public void AddXe(string bienso)
+        {
+            DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { bienso });
+        }
+
         public void DeteleXe(string biensofind)
         {
             DataProvider.Instance.ExecuteQuery("proc??? @BienSoFind", new object[] { biensofind });
