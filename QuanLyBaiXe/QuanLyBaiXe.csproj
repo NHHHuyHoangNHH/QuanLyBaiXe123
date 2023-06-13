@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,6 +51,18 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VControls\VButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VControls\VDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VControls\VTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VControls\VTextbox.Designer.cs">
+      <DependentUpon>VTextbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="vInOut.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,7 +107,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VControls\VTextbox.resx">
+      <DependentUpon>VTextbox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vInOut.resx">
       <DependentUpon>vInOut.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +130,7 @@
     <EmbeddedResource Include="vVIP.resx">
       <DependentUpon>vVIP.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,6 +143,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

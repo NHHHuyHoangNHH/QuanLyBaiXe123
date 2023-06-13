@@ -17,12 +17,7 @@ namespace QuanLyBaiXe
             InitializeComponent();
         }
 
-        private void vSearch_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void XERAVAO_Click(object sender, EventArgs e)
+        private void bt_InOut_Click(object sender, EventArgs e)
         {
             vInOut v = new vInOut();
             this.Hide();
@@ -30,7 +25,7 @@ namespace QuanLyBaiXe
             this.Show();
         }
 
-        private void VEVIP_Click(object sender, EventArgs e)
+        private void bt_VIP_Click(object sender, EventArgs e)
         {
             vVIP v = new vVIP();
             this.Hide();
@@ -38,7 +33,7 @@ namespace QuanLyBaiXe
             this.Show();
         }
 
-        private void DOANHTHU_Click(object sender, EventArgs e)
+        private void bt_Revenue_Click(object sender, EventArgs e)
         {
             vRevenue v = new vRevenue();
             this.Hide();
@@ -46,7 +41,7 @@ namespace QuanLyBaiXe
             this.Show();
         }
 
-        private void LOG_Click(object sender, EventArgs e)
+        private void bt_Log_Click(object sender, EventArgs e)
         {
             vLog v = new vLog();
             this.Hide();
@@ -54,7 +49,7 @@ namespace QuanLyBaiXe
             this.Show();
         }
 
-        private void DANGXUAT_Click(object sender, EventArgs e)
+        private void bt_LogOut_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
